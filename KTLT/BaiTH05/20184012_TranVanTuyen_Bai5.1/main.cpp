@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include<iostream>
+using namespace std;
+int x[100], mark[100], n;
+
+void print(){
+    for (int i = 1; i <= n; ++i) printf("%d ", x[i]);
+    printf("\n");
+}
+
+void process(int i) {
+    if (i > n){
+        print();
+        return;
+    }
+    for (int j = 1; j <= n; ++j)
+        if (!mark[j]){
+            mark[j] = 1;
+            x[i] = j;
+            process(i+1);
+            mark[j] = 0;
+        }
+}
+
+int main() {
+    cout<<"Ho va ten: Tran Van Tuyen"<<endl;
+    cout<<"MSSV: 20184012"<<endl;
+    n = 5;
+    process(1);
+    return 0;
+}

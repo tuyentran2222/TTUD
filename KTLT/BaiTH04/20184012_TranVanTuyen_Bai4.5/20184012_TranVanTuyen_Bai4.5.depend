@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1607511229 source:c:\code blocks\codeblocks\mingw\bin\20184012_tranvantuyen_bai4.5\main.cpp
+	<iostream>
+	<vector>
+	<list>
+	<stack>
+
